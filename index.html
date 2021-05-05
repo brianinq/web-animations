@@ -11,7 +11,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body data-barba="wrapper">
     <header class="nav-header">
         <h1><a href="./" id="logo">life.</a></h1>
         <div class="burger">
@@ -19,7 +19,7 @@
             <div class="line2"></div>
         </div>
     </header>
-    <main>
+    <main data-barba="container" data-barba-namespace='home'>
         <section class="mountain slide">
             <div class="hero-img">
                 <img src="./img/forest.png" alt="" srcset="mountain and forest image">
@@ -101,9 +101,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
         integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"
-        integrity="sha512-7b1FfB2MGnB65aK6jrbS8k3REB+8bEE8UfP/TEwacejD0g02nLLI1VL4IPcKyiLk2lf7HJWaUYEUWc65aqaXQg=="
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+
     <script src="./app.js"></script>
 </body>
 
