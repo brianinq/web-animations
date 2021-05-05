@@ -142,6 +142,7 @@ body{
     border: 2px solid #fff;
     border-radius: 50%;
     position: absolute;
+    pointer-events: none;
 }
 .scrollmagic-pin-spacer{ //fix button not being clickable on scroll
     position: static !important;
