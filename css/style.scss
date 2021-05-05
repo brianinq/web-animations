@@ -9,9 +9,10 @@ $secondary-font: 'Abril Fatface', cursive;
 body{
     background: #17181a;
     font-family: $main-font;
+    overflow-x: hidden;
 } 
-.logo {
-    font-size: $secondary-font;
+#logo {
+    font-family: $secondary-font;
     color: #fff;
 }
 .nav-header {
@@ -63,6 +64,7 @@ body{
 .hero-img{
     position: relative;
     flex: 1 1 25rem;
+    overflow: hidden;
 
     img{
         object-fit: cover;

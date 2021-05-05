@@ -8,10 +8,11 @@
 body {
   background: #17181a;
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
 
-.logo {
-  font-size: "Abril Fatface", cursive;
+#logo {
+  font-family: "Abril Fatface", cursive;
   color: #fff;
 }
 
@@ -94,6 +95,7 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 25rem;
           flex: 1 1 25rem;
+  overflow: hidden;
 }
 
 .hero-img img {
