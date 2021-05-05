@@ -131,10 +131,10 @@ body{
 .reveal-text {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 150%; // to prevent flicker on gsap animation
     background: #17181a;
     left: 0;
-    top: 0;
+    top: -15%; // fix flicker on scroll
 }
 .cursor {
     width: 3rem;
@@ -142,4 +142,7 @@ body{
     border: 2px solid #fff;
     border-radius: 50%;
     position: absolute;
+}
+.scrollmagic-pin-spacer{ //fix button not being clickable on scroll
+    position: static !important;
 }
