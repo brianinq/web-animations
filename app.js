@@ -1,5 +1,6 @@
 let controller;
 let slideScene;
+let pageScene;
 
 function animateSlides() {
     controller = new ScrollMagic.Controller();
@@ -43,6 +44,48 @@ function animateSlides() {
             y: 0
         }, '-=0.9')
 
+
+
+        //create scene
+        slideScene = new ScrollMagic.Scene({
+                triggerElement: slide,
+                triggerHook: 0.25,
+                reverse: false //default is true and undoes animation on scrolling up
+
+            })
+            .setTween(gsapTimeline) // runs the gsap animations when we get to the trigger
+            .addIndicators({
+                colorStart: 'white',
+                colorTrigger: 'white'
+            })
+            .addTo(controller);
+
+        //new animation
+        const pageTimeline = gsap.timeline();
+        pageTimeline.fromTo(slide, {
+            opacity: 1,
+            scale: 1
+        }, {
+            opacity: 0,
+            scale: 0
+        })
+        // new scene
+        pageScene = new ScrollMagic.Scene({
+                triggerElement: slide,
+                duration: '100%',
+                triggerHook: 0
+            })
+            .addIndicators({
+                colorStart: 'white',
+                colorTrigger: 'white',
+                name: 'pageTrigger',
+                indent: 200
+            })
+            .setPin(slide, {
+                pushFollowers: false
+            })
+            .setTween(pageTimeline)
+            .addTo(controller);
     });
 }
 
