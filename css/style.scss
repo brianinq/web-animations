@@ -1,0 +1,143 @@
+$main-font :'Roboto', sans-serif;
+$secondary-font: 'Abril Fatface', cursive;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #17181a;
+    font-family: $main-font;
+} 
+.logo {
+    font-size: $secondary-font;
+    color: #fff;
+}
+.nav-header {
+    min-height: 10vh;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    width: 80%;
+    margin: auto;
+    padding: 1.5rem 0;
+}
+.line1,.line2 { 
+    width: 3rem;
+    height: 0.3rem;
+    background: #fff;
+    margin: 0.4rem;
+    pointer-events: none;
+}
+.slide {
+    min-height: 100vh;
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+.hero-desc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 25rem;
+    padding-left: 5rem;
+    position:  relative;
+
+    h2{
+        font-family: $secondary-font;
+        font-size: 3rem;
+    }
+    p{
+        padding: 3rem 0rem;
+        font-size: 1.5rem;
+        color: rgb(233, 233, 233);
+    }
+}
+.hero-img{
+    position: relative;
+    flex: 1 1 25rem;
+
+    img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+.mountain-span{
+    color: rgb(86,124,228);
+}
+.hike-span{
+    color: rgb(167,110,231);
+}
+.fashion-span{
+    color: rgb(255,139,93);
+}
+
+.explore{
+    padding: 1rem 2rem ;
+    background: none;
+    border: none;
+    color: #fff;
+    border: 1px solid #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    align-self: flex-start;
+    cursor: pointer;
+}
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+    opacity: 1;
+    clip-path: circle(50px at 100% -10%);
+}
+.burger {
+    cursor: pointer;
+}
+.nav-links {
+    font-size: 3rem;
+    flex: 1 1 30rem;
+    margin-left: 10%;
+}
+.contact {
+    flex: 1 1 30rem;
+    margin-right: 10%;
+    h2{
+        font-size: 3rem;
+        padding: 2rem 0;
+    }
+    p{
+      font-size: 1.5rem;  
+      line-height: 2rem;
+    }
+}
+// .reveal-img,
+// .reveal-text {
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     background: #17181a;
+//     left: 0;
+//     top: 0;
+// }
+.cursor {
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+}
