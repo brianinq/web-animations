@@ -54,10 +54,10 @@ function animateSlides() {
 
             })
             .setTween(gsapTimeline) // runs the gsap animations when we get to the trigger
-            .addIndicators({
-                colorStart: 'white',
-                colorTrigger: 'white'
-            })
+            // .addIndicators({
+            //     colorStart: 'white',
+            //     colorTrigger: 'white'
+            // })
             .addTo(controller);
 
         //new animation
@@ -75,12 +75,12 @@ function animateSlides() {
                 duration: '100%',
                 triggerHook: 0
             })
-            .addIndicators({
-                colorStart: 'white',
-                colorTrigger: 'white',
-                name: 'pageTrigger',
-                indent: 200
-            })
+            // .addIndicators({
+            //     colorStart: 'white',
+            //     colorTrigger: 'white',
+            //     name: 'pageTrigger',
+            //     indent: 200
+            // })
             .setPin(slide, {
                 pushFollowers: false
             })
