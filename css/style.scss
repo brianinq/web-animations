@@ -143,7 +143,16 @@ body{
     border-radius: 50%;
     position: absolute;
     pointer-events: none;
+    transform: translate(-50%, -50%);
+
+    &.nav-active{
+        transform: scale(2);
+        transform-origin: 50%;
+        background: transparent;
+    }
 }
+
+
 .scrollmagic-pin-spacer{ //fix button not being clickable on scroll
     position: static !important;
 }

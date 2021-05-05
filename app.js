@@ -89,4 +89,22 @@ function animateSlides() {
     });
 }
 
+let mouse = document.querySelector('.cursor')
+
+function cursor(event) {
+    mouse.style.top = event.pageY + 'px';
+    mouse.style.left = event.pageX + 'px';
+}
+
+function activeCursor(event) {
+    const item = event.target;
+    if (item.id === 'logo' || item.classList.contains('burger')) {
+        mouse.classList.add('nav-active')
+    } else {
+        mouse.classList.remove('nav-active')
+    }
+}
+
+window.addEventListener('mousemove', cursor)
+window.addEventListener('mousemove', activeCursor)
 animateSlides();

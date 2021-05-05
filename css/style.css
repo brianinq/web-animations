@@ -197,6 +197,16 @@ body {
   border-radius: 50%;
   position: absolute;
   pointer-events: none;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.cursor.nav-active {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  -webkit-transform-origin: 50%;
+          transform-origin: 50%;
+  background: transparent;
 }
 
 .scrollmagic-pin-spacer {
