@@ -105,6 +105,54 @@ function activeCursor(event) {
     }
 }
 
+const burger = document.querySelector('.burger')
+
+function navToggle(event) {
+    if (!event.target.classList.contains('active')) {
+        event.target.classList.add('active')
+        gsap.to('.line1', {
+            rotate: '45',
+            y: 5,
+            background: 'black'
+        })
+        gsap.to('.line2', {
+            rotate: '-45',
+            y: -5,
+            background: 'black'
+        })
+        gsap.to('#logo', {
+            color: 'black'
+        })
+        gsap.to('.nav-bar', 1, {
+            clipPath: "circle(2500px at 100% 10%)"
+        })
+        document.body.classList.add('hide')
+    } else {
+        event.target.classList.remove('active')
+        gsap.to('.line1', {
+            rotate: '0',
+            y: 0,
+            background: 'white'
+        })
+        gsap.to('.line2', {
+            rotate: '0',
+            y: 0,
+            background: 'white'
+        })
+        gsap.to('#logo', {
+            color: 'white'
+        })
+        gsap.to('.nav-bar', 1, {
+            clipPath: "circle(50px at 100% -10%)"
+        })
+        document.body.classList.remove('hide')
+    }
+}
+
+
+
+
+burger.addEventListener('click', navToggle)
 window.addEventListener('mousemove', cursor)
 window.addEventListener('mousemove', activeCursor)
 animateSlides();
